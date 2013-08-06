@@ -2,13 +2,20 @@
   "name"          : "http-console",
   "description"   : "Speak HTTP like a native",
   "url"           : "http://github.com/cloudhead/http-console",
+  "repository"    : { "type": "git", "url": "http://github.com/cloudhead/http-console" },
+  "bugs"          : "http://github.com/cloudhead/http-console/issues",
   "keywords"      : ["http", "console", "repl"],
   "author"        : "Alexis Sellier <self@cloudhead.net>",
-  "contributors"  : [],
+  "contributors"  : [{ "name": "jawsome", "email": "atynefield@gmail.com", "url": "http://github.com/jawsome"}],
   "dependencies"  : { "eyes": ">=0.1.4" },
   "version"       : "0.6.2",
   "main"          : "./lib/http-console",
   "directories"   : { "lib": "./lib", "test": "./test" },
   "bin"           : { "http-console": "./bin/http-console" },
-  "engines"       : { "node": ">=0.6.0" }
+  "engines"       : { "node": ">=0.6.0" },
+  "scripts"       : { "test": "node test/index.js && vows --spec" },
+  "devDependencies" : {
+    "async": ">=0.1.x",
+    "vows": ">=0.7.x"
+  }
 }
